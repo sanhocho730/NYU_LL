@@ -1,0 +1,28 @@
+.main{
+    display: flex;
+    padding: 2rem 3rem;
+    font-size: 20px;
+
+    .logo{
+        color: #57068C;
+        font-size: 30px;
+    }
+
+    menu {
+        display: flex;
+        gap: 1rem;
+        margin-left: auto;
+
+        .link{
+            display: flex;
+            align-items: center;
+        }
+
+        .login{
+            background-color: #57068C;
+            border-radius: 8px;
+            color: white;
+            padding: 0rem 1rem;
+        }
+    }
+}
