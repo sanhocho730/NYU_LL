@@ -6,7 +6,7 @@ export default function Header() {
         <Link href="/" className={styles.logo}><b>NYU COURSE GUIDE</b></Link>
         <menu>
             <Link href="/" className={styles.link}>Chat with AI</Link>
-            <Link href="/" className={styles.link}>Search</Link>
+            <Link href="/search" className={styles.link}>Search</Link>
             <Link href="/" className={styles.link}>About</Link>
             <Link href="/" className={`${styles.link} ${styles.login}`}>Login</Link>
         </menu>
