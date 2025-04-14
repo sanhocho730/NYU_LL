@@ -7,13 +7,14 @@
     border-radius: 10px;
     padding: 1rem;
     color: #828282;
+    max-width: 25rem;
 
     h3{
         grid-column:  1 / span 3;
         color: black;
     }
 
-    .rating{
+    .rating, .difficulty{
         display: flex;
         flex-direction: column;
         justify-content: center;

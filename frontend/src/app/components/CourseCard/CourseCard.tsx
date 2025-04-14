@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function CourseCard() {
     return <Link href="/" className={styles.main}>
         <h3>Course Name</h3>
-        <p>Prof. Professr Name</p>
+        <p>Prof. Professor name</p>
         <div className={styles.rating}>
             <p>overall</p>
             <h1>4.9</h1>
