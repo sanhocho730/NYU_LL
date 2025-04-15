@@ -15,7 +15,6 @@ export type Review = {
     reviews: Review[];
   };
   
-  // In-memory array of courses (for demo purposes)
   export let courses: Course[] = [
     {
       id: "1",

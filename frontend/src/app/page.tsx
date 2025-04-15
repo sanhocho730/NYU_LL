@@ -1,5 +1,5 @@
 import styles from "./page.module.scss";
-import CourseCard from "./components/CourseCard/CourseCard"; // adjust the import path if needed
+import CourseCard from "./components/CourseCard/CourseCard";
 import Link from "next/link";
 
 type Course = {
@@ -21,10 +21,9 @@ async function getCourses(): Promise<Course[]> {
 }
 
 export default async function Home() {
-  // Fetch courses from your internal API
   const courses = await getCourses();
 
-  // You can filter or sort courses into different sections as desired
+
   const topRatedCourses = courses.filter((course) => course.rating >= 4.7);
   const lowDifficultyCourses = courses.filter((course) => course.difficulty <= 2.2);
 
