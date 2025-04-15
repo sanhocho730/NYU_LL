@@ -31,6 +31,7 @@ export default function Home() {
               <option value="sps">SPS</option>
               <option value="stern">Stern</option>
               <option value="tisch">Tisch</option>
+              <option value="tisch">Tandon</option>
             </select>
             &nbsp;&nbsp;Courses</h1>
           <Link href="/" className={styles.seemore}>See More &#x2192;</Link>

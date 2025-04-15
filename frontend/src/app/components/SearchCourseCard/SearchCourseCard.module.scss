@@ -1,0 +1,99 @@
+.card {
+    background: #fff;
+    border: 2px solid #484848;
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .headerRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    color: #747474;
+  }
+  
+  .meta {
+    display: flex;
+    gap: 1.25rem;
+    font-weight: 500;
+  }
+  
+  .divider {
+    border: none;
+    border-top: 1px solid #747474;
+  }
+  
+  .contentRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  .left {
+    flex: 1;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .professor {
+    font-size: 1.5rem;
+    color: #747474;
+    margin-bottom: 1rem;
+  }
+  
+  .time {
+    font-size: 1.25rem;
+    color: #747474;
+  }
+
+  
+  .rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+  
+    .score {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    .red {
+      background-color: #FF9090;
+    }
+    
+    .yellow {
+      background-color: #FFCD90;
+    }
+    
+    .green {
+      background-color: #90FF9F;
+    }
+    
+    .gray {
+      background-color: #E6E6E6;
+    }
+  
+    .ratingInfo {
+      font-size: 1rem;
+      text-align: center;
+      color: #131313;
+      margin-top: 0.5rem;
+    }
+  }
+  
