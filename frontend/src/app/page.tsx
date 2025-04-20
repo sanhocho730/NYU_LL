@@ -17,14 +17,12 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.overview}>
           <h1><b>Top-Rated</b> Courses</h1>
-          <Link href="/" className={styles.seemore}>See More &#x2192;</Link>
           <ul>
             {COURSES.map((course)=><CourseCard key={course.id} {...course}/>)}
           </ul>
         </div>
         <div className={styles.overview}>
           <h1><b>Low-Difficulty</b> Courses</h1>
-          <Link href="/" className={styles.seemore}>See More &#x2192;</Link>
           <ul>
             {COURSES.map((course)=><CourseCard key={course.id} {...course}/>)}
           </ul>
@@ -39,7 +37,6 @@ export default function Home() {
               <option value="tandon">Tandon</option>
             </select>
             &nbsp;&nbsp;Courses</h1>
-          <Link href="/" className={styles.seemore}>See More &#x2192;</Link>
           <ul>
             {COURSES.map((course)=><CourseCard key={course.id} {...course}/>)}
           </ul>
