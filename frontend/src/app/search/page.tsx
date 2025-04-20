@@ -4,7 +4,6 @@
 import { useState, useEffect, ChangeEvent } from "react";
 import Link from "next/link";
 import styles from "./page.module.scss";
-// 👉 import default, not a named export
 import SearchCourseCard from "../components/SearchCourseCard/SearchCourseCard";
 
 interface CourseOverview {
@@ -16,7 +15,6 @@ interface CourseOverview {
   title: string;
   professor: string;
   time: string;
-  /** renamed from `quality` to `rating` */
   rating: number;
   difficulty: number;
   ratingCount: number;

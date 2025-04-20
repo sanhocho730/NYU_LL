@@ -1,4 +1,4 @@
-import { Course } from "@/app/lib/courses"; // adjust if needed
+import { Course } from "@/app/lib/courses"; 
 import styles from "./CourseCard.module.scss";
 import Link from "next/link";
 

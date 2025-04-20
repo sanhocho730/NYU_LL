@@ -1,4 +1,4 @@
-// src/app/components/SearchCourseCard/SearchCourseCard.tsx
+
 import Link from "next/link";
 import styles from "./SearchCourseCard.module.scss";
 import Quality from "../Quality/Quality";
