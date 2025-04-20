@@ -149,12 +149,12 @@ export default function CourseDetail(){
                 />
             </div>
             <div className={styles.desc}>
-                <h1>{quality}<small>/5</small></h1>
-                <p>{`${semester} - ${code}`}</p>
-                <h1>{title}</h1>
-                <h3>Professor {professor}</h3>
+                <div className={styles.quality}><h1>{quality}</h1><small>/5</small></div>
+                <p className={styles.semcode}>{`${semester} - ${code}`}</p>
+                <h1 className={styles.title}>{title}</h1>
+                <h3 className={styles.professor}>Professor {professor}</h3>
                 <h2>Course Description</h2>
-                <p>{description}</p>
+                <p className={styles.detail}>{description}</p>
             </div>
         </div>
         <div className={styles.rating}>

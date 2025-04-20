@@ -5,8 +5,13 @@
         flex-direction: row;
         gap: 4rem;
         padding: 0rem 3rem 5% 3rem;
+        align-items: center;
+        justify-content: center;
+
         .ratingdist{
             display: flex;
+            // align-self: flex-start;
+            height: auto;
             flex-direction: column;
             background-color: rgba(79,15,135,0.06);
             width: 430px;
@@ -15,6 +20,37 @@
             box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.3);
         }
         .desc{
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            font-size: 15px;
+        
+            .quality{
+                font-size: 25;
+                display: flex;
+                gap: 1rem;
+                align-items: flex-start;
+                h1{
+                    display: flex;
+                    margin: 0;
+                    padding: 0;
+                    line-height: 1;
+                }
+
+                small{
+                    color: #5D5D5D;
+                    font-size: 25;
+                }
+            }
+
+            .semcode{
+                color: #747474;
+                font-size: 20px;
+            }
+
+            .professor, .detail{
+                color: #747474;
+            }
 
 
         }
