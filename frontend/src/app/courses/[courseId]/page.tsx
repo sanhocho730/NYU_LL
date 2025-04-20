@@ -1,6 +1,6 @@
 import styles from './page.module.scss'
 import { BarChart } from '@mui/x-charts/BarChart'
-import { RatingCard, BackButton } from '@/app/components'
+import { RatingCard, BackButton } from '@/components'
 
 const REVIEWS: Array<RatingCardPropType> = [
     {

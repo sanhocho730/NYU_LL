@@ -1,6 +1,6 @@
 "use client";
 import styles from "./page.module.scss";
-import { SearchCourseCard } from "../components";
+import { SearchCourseCard } from "../../components";
 import { useState } from "react";
 import Link from "next/link";
 

@@ -1,5 +1,5 @@
 import styles from "./page.module.scss";
-import { CourseCard } from "./components";
+import { CourseCard } from "../components";
 import Link from "next/link";
 
 export default function Home() {

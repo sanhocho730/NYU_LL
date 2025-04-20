@@ -18,9 +18,6 @@
         "name": "next"
       }
     ],
-    "compilerOptions": {
-      "typeRoots": ["./node_modules/@types", "./src/types"]
-    },
     "paths": {
       "@/*": ["./src/*"]
     }
