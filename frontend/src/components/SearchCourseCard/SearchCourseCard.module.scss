@@ -1,17 +1,17 @@
 .card {
     background: #fff;
-    border: 2px solid #484848;
-    border-radius: 15px;
+    border: 2px solid #a1a1a1;
+    border-radius: 10px;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1rem;
   }
   
   .headerRow {
     display: flex;
     justify-content: space-between;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #747474;
   }
   
@@ -28,29 +28,29 @@
   
   .contentRow {
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   
   .left {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
   }
   
   .title {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 700;
-    margin-bottom: 1rem;
   }
   
   .professor {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #747474;
-    margin-bottom: 1rem;
   }
   
   .time {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: #747474;
   }
 

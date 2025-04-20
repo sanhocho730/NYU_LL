@@ -4,21 +4,8 @@ import { SearchCourseCard } from "../../components";
 import { useState } from "react";
 import Link from "next/link";
 
-type Course = {
-  id: string;
-  semester: string;
-  code: string;
-  department: string;
-  credits: number;
-  title: string;
-  professor: string;
-  time: string;
-  quality: number;
-  difficulty: number;
-  ratingCount: number;
-};
 
-const mockCourses: Course[] = [
+const mockCourses: CourseOverview[] = [
   {
     id: "1",
     semester: "Fall 2024",
@@ -100,7 +87,6 @@ const mockCourses: Course[] = [
 ];
 
 
-
 export default function SearchPage() {
   const [searchKeyword, setSearchKeyword] = useState("");
   const [selectedDept, setSelectedDept] = useState("");
@@ -130,52 +116,55 @@ export default function SearchPage() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>
-        <Link href="/search" className={styles.title}>
-          Course Search
-        </Link>
-      </h1>
+      <div className={styles.header}>
+        <h1 className={styles.title}>
+          <Link href="/search" className={styles.title}>
+            Course Search
+          </Link>
+        </h1>
 
-      <input
-        type="text"
-        placeholder="Search by Course Name, Code Number, Professor …"
-        className={styles.searchbar}
-        value={searchKeyword}
-        onChange={(e) => setSearchKeyword(e.target.value)}
-      />
+        <input
+          type="text"
+          placeholder="Search by Course Name, Code Number, Professor …"
+          className={styles.searchbar}
+          value={searchKeyword}
+          onChange={(e) => setSearchKeyword(e.target.value)}
+        />
 
-      <div className={styles.filterRow}>
-        <select className={styles.dropdown} onChange={(e) => setSelectedDept(e.target.value)}>
-          <option value="">Department</option>
-          <option value="CAS">CAS</option>
-          <option value="SPS">SPS</option>
-          <option value="Stern">Stern</option>
-          <option value="Tisch">Tisch</option>
-          <option value="Tandon">Tandon</option>
-        </select>
+        <div className={styles.filterRow}>
+          <select className={styles.dropdown} onChange={(e) => setSelectedDept(e.target.value)}>
+            <option value="">Department</option>
+            <option value="CAS">CAS</option>
+            <option value="SPS">SPS</option>
+            <option value="Stern">Stern</option>
+            <option value="Tisch">Tisch</option>
+            <option value="Tandon">Tandon</option>
+          </select>
 
-        <select className={styles.dropdown} onChange={(e) => setSelectedProf(e.target.value)}>
-          <option value="">Professor</option>
-          <option value="Wenzheng Shi">Wenzheng Shi</option>
-          <option value="Jane Doe">Jane Doe</option>
-          <option value="John Smith">John Smith</option>
-        </select>
+          <select className={styles.dropdown} onChange={(e) => setSelectedProf(e.target.value)}>
+            <option value="">Professor</option>
+            <option value="Wenzheng Shi">Wenzheng Shi</option>
+            <option value="Jane Doe">Jane Doe</option>
+            <option value="John Smith">John Smith</option>
+          </select>
 
-        <select className={styles.dropdown} onChange={(e) => setSelectedCredit(e.target.value)}>
-          <option value="">Credits</option>
-          <option value="< 2">&lt; 2</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="> 4">&gt; 4</option>
-        </select>
+          <select className={styles.dropdown} onChange={(e) => setSelectedCredit(e.target.value)}>
+            <option value="">Credits</option>
+            <option value="< 2">&lt; 2</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="> 4">&gt; 4</option>
+          </select>
 
-        <select className={styles.dropdown} onChange={(e) => setSortBy(e.target.value)}>
-          <option value="">Sort By</option>
-          <option value="quality">High Quality</option>
-          <option value="difficulty">Low Difficulty</option>
-        </select>
+          <select className={`${styles.dropdown} ${styles.sortby}`}onChange={(e) => setSortBy(e.target.value)}>
+            <option value="" className={styles.sortby}>Sort By: </option>
+            <option value="quality">High Quality</option>
+            <option value="difficulty">Low Difficulty</option>
+          </select>
+        </div>
       </div>
+
 
       <div className={styles.cardList}>
         {filteredCourses.map((course) => (

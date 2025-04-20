@@ -11,6 +11,7 @@ export default function SearchCourseCard(course: SearchCourseCardProp) {
         : styles.green;
 
   return (
+    <Link href={`/courses/${course.id}`}>
     <div className={styles.card}>
       <div className={styles.headerRow}>
         <div className={styles.headerText}>
@@ -27,9 +28,7 @@ export default function SearchCourseCard(course: SearchCourseCardProp) {
       <div className={styles.contentRow}>
         <div className={styles.left}>
           <h2 className={styles.title}>
-            <Link href={`/courses/${course.id}`} className={styles.title}>
               {course.title}
-            </Link>
           </h2>
           <p className={styles.professor}>
             professor <strong>{course.professor}</strong>
@@ -42,5 +41,6 @@ export default function SearchCourseCard(course: SearchCourseCardProp) {
 
       </div>
     </div>
+    </Link>
   );
 }
