@@ -26,17 +26,6 @@ declare global {
         ratingCount: number;
       }
 
-    type CourseDetail = {
-        id: number,
-        quality: number,
-        semester: string,
-        code: string,
-        title: string, 
-        professor: string,
-        description: string,
-        ratings: Array<RatingCardPropType>,
-    }
-
     type QualityPropType = {
         category?: string,
         rating: number,
