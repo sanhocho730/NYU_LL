@@ -1,29 +1,19 @@
 import styles from './RatingCard.module.scss'
+import RatingTag from '../RatingTag/RatingTag'
+import Quality from '../Quality/Quality'
 
-export default function RatingCard(){
+export default function RatingCard({tagList, comment, rating}:RatingCardPropType){
+
+
     return <div className={styles.main}>
         <div className={styles.taglist}>
-            <p>Difficulty: 1</p>
-            <p>Difficulty: 1</p>
-            <p>Difficulty: 1</p>
-            <p>Difficulty: 1</p>
-            <p>Difficulty: 1</p>
-            <p>Difficulty: 1</p>
-            <p>Difficulty: 1</p>
-            <p>Difficulty: 1</p>
-            <p>Difficulty: 1</p>
-            <p>Difficulty: 1</p>
-            <p>Difficulty: 1</p>
-            <p>Difficulty: 1</p>
+            {tagList.map((tag,ind)=><RatingTag key = {`${tag.category}-${ind}`} {...tag} />)}
         </div>
         <div className={styles.body}>
             <p>
-            Professor Shi is one of the most helpful and caring professors at OP. He explains complex chemistry topics clearly, making lectures engaging and resourceful. Since he teaches non-credit courses, there's no pressure, to foster better learning. Anyone in his class is lucky to learn from his vast knowledge and experience.
+            {comment}
             </p>
-            <div className={styles.quality}>
-                <p>Quality</p>
-                <h1>4</h1>
-            </div>
+            <Quality rating={rating}/>
 
         </div>
     </div>

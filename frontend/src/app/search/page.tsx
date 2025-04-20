@@ -179,7 +179,7 @@ export default function SearchPage() {
 
       <div className={styles.cardList}>
         {filteredCourses.map((course) => (
-          <SearchCourseCard key={course.id} course={course} />
+          <SearchCourseCard key={course.id} {...course} />
         ))}
       </div>
     </div>

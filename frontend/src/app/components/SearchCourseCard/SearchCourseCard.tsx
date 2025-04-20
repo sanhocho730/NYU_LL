@@ -1,21 +1,8 @@
 import styles from "./SearchCourseCard.module.scss";
 import Link from "next/link";
+import Quality from "../Quality/Quality";
 
-type Course = {
-  id: string;
-  semester: string;
-  code: string;
-  department: string;
-  credits: number;
-  title: string;
-  professor: string;
-  time: string;
-  quality: number;
-  difficulty: number;
-  ratingCount: number;
-};
-
-export default function SearchCourseCard({ course }: { course: Course }) {
+export default function SearchCourseCard(course: SearchCourseCardProp) {
   const qualityColor =
     course.quality < 3.0
       ? styles.red
@@ -50,19 +37,8 @@ export default function SearchCourseCard({ course }: { course: Course }) {
           <div className={styles.time}>{course.time}</div>
         </div>
 
-        <div className={styles.rating}>
-          <div className={`${styles.score} ${qualityColor}`}>
-            {course.quality.toFixed(1)}
-          </div>
-          <div className={styles.ratingInfo}>Quality</div>
-        </div>
-        <div className={styles.rating}>
-          
-          <div className={`${styles.score} ${styles.gray}`}>
-            {course.difficulty.toFixed(1)}
-          </div>
-          <div className={styles.ratingInfo}>Difficulty</div>
-        </div>
+        <Quality rating={course.quality}/>
+        <Quality category='difficulty' rating={course.difficulty}/>
 
       </div>
     </div>
