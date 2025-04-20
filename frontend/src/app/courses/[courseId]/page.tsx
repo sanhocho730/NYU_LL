@@ -1,6 +1,6 @@
 import styles from './page.module.scss'
-import { BarChart } from '@mui/x-charts/BarChart';
-import { RatingCard, BackButton } from '@/app/components';
+import { BarChart } from '@mui/x-charts/BarChart'
+import { RatingCard, BackButton } from '@/app/components'
 
 const REVIEWS: Array<RatingCardPropType> = [
     {
@@ -111,7 +111,7 @@ const exData: CourseDetail = {
     ratings: REVIEWS
 }
   
-export default function CourseDetail(){
+export default async function CourseDetail({params}: any){
     const {quality, semester, code, title, professor, description, ratings} = exData
     
     const ratingDist = new Array(5).fill(0)
@@ -119,6 +119,9 @@ export default function CourseDetail(){
      for(const rating of ratings) ratingDist[rating.rating-1]++
      ratingDist.reverse()
      const spaces = ratingDist.map(num=>totalNum-num)
+
+     const {courseId} = await params
+     console.log(courseId)
 
     
     return <div className={styles.main}>
