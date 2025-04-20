@@ -1,0 +1,51 @@
+.container {
+    min-height: 100vh;
+    margin: 0;
+    font-size: 15px;
+
+    .header{
+      padding: 0rem 3rem;
+      .title {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        color: #57068C; // NYU 보라색 느낌
+      }
+      
+      .searchbar {
+        width: 100%;
+        padding: 1.25rem 1.75rem;
+        border-radius: 9999px;
+        border: none;
+        margin-bottom: 2rem;
+        background-color: #E6E6E6;
+      }
+      
+      .filterRow {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+        flex-wrap: wrap;
+      }
+      
+      .dropdown {
+        padding: 0.5rem 1rem;
+        border-radius: 30px;
+        border: 1px solid #acacac;
+        font-size: 1.25rem;
+
+        &.sortby{
+          margin-left: auto;
+        }
+      }
+    }
+    
+    .cardList {
+      background-color: rgba(79, 15, 135, 0.15);
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+}
