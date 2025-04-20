@@ -2,6 +2,15 @@ import styles from "./page.module.scss";
 import { CourseCard } from "../components";
 import Link from "next/link";
 
+const COURSES: Array<CourseCardPropType> = new Array(3).fill(
+  {
+    id: 0,
+    title: 'Numerical Analysis',
+    professor: 'Wenzheng shi',
+    quality: 4.44,
+    difficulty: 2.45,
+  })
+
 export default function Home() {
   return (
     <div className={styles.page}>
@@ -10,18 +19,14 @@ export default function Home() {
           <h1><b>Top-Rated</b> Courses</h1>
           <Link href="/" className={styles.seemore}>See More &#x2192;</Link>
           <ul>
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
+            {COURSES.map((course)=><CourseCard key={course.id} {...course}/>)}
           </ul>
         </div>
         <div className={styles.overview}>
           <h1><b>Low-Difficulty</b> Courses</h1>
           <Link href="/" className={styles.seemore}>See More &#x2192;</Link>
           <ul>
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
+            {COURSES.map((course)=><CourseCard key={course.id} {...course}/>)}
           </ul>
         </div>
         <div className={styles.overview}>
@@ -36,12 +41,7 @@ export default function Home() {
             &nbsp;&nbsp;Courses</h1>
           <Link href="/" className={styles.seemore}>See More &#x2192;</Link>
           <ul>
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
+            {COURSES.map((course)=><CourseCard key={course.id} {...course}/>)}
           </ul>
         </div>
       </main>

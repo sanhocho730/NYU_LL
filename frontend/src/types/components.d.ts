@@ -41,5 +41,13 @@ declare global {
         category?: string,
         rating: number,
     }
+
+    type CourseCardPropType = {
+        id: number,
+        title: string,
+        professor: string,
+        quality: number,
+        difficulty: number,
+    }
       
 }
