@@ -1,0 +1,52 @@
+.card {
+    background: #fff;
+    border-radius: 6px;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: start;
+    margin-bottom: 1rem;
+  }
+  
+  .tags {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tag {
+    background: #dffadb;
+    color: #276749;
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+  }
+  
+  .comment {
+    grid-column: 1 / -1;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .quality {
+    text-align: right;
+    font-size: 0.75rem;
+    color: #333;
+  }
+  
+  .qualityValue {
+    margin-top: 0.25rem;
+    background: #dffadb;
+    color: #276749;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
