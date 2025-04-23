@@ -68,6 +68,7 @@ export default async function Home() {
               <option value="sps">SPS</option>
               <option value="stern">Stern</option>
               <option value="tisch">Tisch</option>
+              <option value="tandon">Tandon</option>
             </select>
             &nbsp;&nbsp;Courses
           </h1>

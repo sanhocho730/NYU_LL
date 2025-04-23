@@ -1,4 +1,4 @@
-
+// src/app/components/SearchCourseCard/SearchCourseCard.tsx
 import Link from "next/link";
 import styles from "./SearchCourseCard.module.scss";
 import Quality from "../Quality/Quality";
@@ -26,7 +26,7 @@ export default function SearchCourseCard(props: SearchCourseCardProp) {
           {props.semester} &mdash; {props.code}
         </span>
         <span className={styles.meta}>
-          {props.department} &bull; {props.credits} cr
+          {props.department} &bull; {props.credits} cr
         </span>
       </div>
 
@@ -42,10 +42,13 @@ export default function SearchCourseCard(props: SearchCourseCardProp) {
         </div>
 
         <div className={styles.ratings}>
+          {/* Overall quality */}
           <Quality rating={props.rating} />
+          {/* Difficulty */}
           <Quality category="Difficulty" rating={props.difficulty} />
         </div>
       </div>
     </Link>
   );
 }
+
