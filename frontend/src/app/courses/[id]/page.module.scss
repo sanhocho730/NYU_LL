@@ -1,0 +1,88 @@
+/* src/app/courses/[id]/page.module.scss */
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .pageTitle {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .topSection {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  
+  .infoPanel {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .overallScore {
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+  }
+  
+  .scoreValue {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .scoreMax {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .semesterCode {
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  
+  .courseTitle {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+  }
+  
+  .subheader {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .description {
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .rateButton {
+    margin-top: 1.5rem;
+    background: #8900e1;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .rateButton:hover {
+    background: #6a00b3;
+  }
+  
+  .reviewsSection {
+    background: #faf4ff;
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+  
+  .reviewsHeader {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  

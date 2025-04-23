@@ -1,32 +1,45 @@
-.main{
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 1rem;
-    border: 2px solid #aeaeae;
-    border-radius: 10px;
+.main {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
     padding: 1rem;
-    color: #828282;
-    max-width: 25rem;
-
-    h3{
-        grid-column:  1 / span 3;
-        color: black;
+    width: 220px; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  
+    &:hover {
+      transform: translateY(-2px);
     }
-
-    .rating, .difficulty{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        h1{
-            color: #8900E1;
-        }
-    }
-
-    .difficulty{
-        h1{
-            color: black;
-        }
-    }
-}
+  }
+  
+  .title {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .professor {
+    margin: 0 0 0.6rem;
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .metrics {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #333; 
+  }
+  
+  .overallValue {
+    color: #8900e1;
+    font-weight: bold;
+    margin: 0 0.2rem;
+  }
+  
+  .difficultyValue {
+    color: #000;
+    font-weight: bold;
+    margin-left: 0.2rem;
+  }
+  
