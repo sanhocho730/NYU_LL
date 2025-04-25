@@ -18,6 +18,7 @@ interface CourseOverview {
   rating: number;
   difficulty: number;
   ratingCount: number;
+  description : string;
 }
 
 export default function SearchPage() {

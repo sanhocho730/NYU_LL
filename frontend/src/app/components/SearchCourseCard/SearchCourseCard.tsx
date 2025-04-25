@@ -12,43 +12,63 @@ export type SearchCourseCardProp = {
   title: string;
   professor: string;
   time: string;
-  /** overall rating */
-  rating: number;
-  difficulty: number;
+  rating: number;        // overall rating (average)
+  difficulty: number;    // overall difficulty (average)
+  description: string;
   ratingCount: number;
 };
 
 export default function SearchCourseCard(props: SearchCourseCardProp) {
-  return (
-    <Link href={`/courses/${props.id}`} className={styles.card}>
-      <div className={styles.headerRow}>
-        <span className={styles.headerText}>
-          {props.semester} &mdash; {props.code}
-        </span>
-        <span className={styles.meta}>
-          {props.department} &bull; {props.credits} cr
-        </span>
+  const qualityColor =
+  props.rating < 3.0
+    ? styles.red
+    : props.rating < 4.0
+      ? styles.yellow
+      : styles.green;
+
+return (
+  
+  <div className={styles.card}>
+    <div className={styles.headerRow}>
+      <div className={styles.headerText}>
+        {props.semester} - {props.code}
+      </div>
+      <div className={styles.meta}>
+        <span>{props.department}</span>
+        <span>{props.credits} Credits</span>
+      </div>
+    </div>
+
+    <hr className={styles.divider} />
+
+    <div className={styles.contentRow}>
+      <div className={styles.left}>
+        <h2 className={styles.title}>
+          <Link href={`/courses/${props.id}`} className={styles.title}>
+            {props.title}
+          </Link>
+        </h2>
+        <p className={styles.professor}>
+          professor <strong>{props.professor}</strong>
+        </p>
+        <div className={styles.time}>{props.time}</div>
       </div>
 
-      <hr className={styles.divider} />
-
-      <div className={styles.contentRow}>
-        <div className={styles.left}>
-          <h2 className={styles.title}>{props.title}</h2>
-          <p className={styles.professor}>
-            Prof. <strong>{props.professor}</strong>
-          </p>
-          <p className={styles.time}>{props.time}</p>
+      <div className={styles.rating}>
+        <div className={`${styles.score} ${qualityColor}`}>
+          {props.rating.toFixed(1)}
         </div>
-
-        <div className={styles.ratings}>
-          {/* Overall quality */}
-          <Quality rating={props.rating} />
-          {/* Difficulty */}
-          <Quality category="Difficulty" rating={props.difficulty} />
-        </div>
+        <div className={styles.ratingInfo}>Quality</div>
       </div>
-    </Link>
-  );
+      <div className={styles.rating}>
+
+        <div className={`${styles.score} ${styles.gray}`}>
+          {props.difficulty.toFixed(1)}
+        </div>
+        <div className={styles.ratingInfo}>Difficulty</div>
+      </div>
+
+    </div>
+  </div>
+);
 }
-
